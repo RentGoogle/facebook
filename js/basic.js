@@ -10,7 +10,7 @@ $( document ).ready(function() {
 		$("body, html").animate({scrollTop:$(".reasons").offset().top - $(".top").outerHeight() + 1000}, 1000, "easeInOutExpo");
 	});
 	$("#m2").click(function() {
-		$("body, html").animate({scrollTop:$(".steps").offset().top - $(".top").outerHeight() + 1}, 1300, "easeInOutExpo");
+		$("body, html").animate({scrollTop:$(".steps").offset().top - $(".top").outerHeight() + 1}, 500, "easeInOutExpo");
 	});
 	$("#m3").click(function() {
 		$("body, html").animate({scrollTop:$(".h2-safe").offset().top - $(".top").outerHeight()-40}, 1300, "easeInOutExpo");
